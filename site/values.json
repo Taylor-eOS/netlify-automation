@@ -1,18 +1,18 @@
 {
   "1": {
-    "value": 12.1,
+    "value": 121,
     "exp": "test",
     "timestamp": "2025-09-29T15:00:00Z",
     "status": "ok"
   },
   "2": {
-    "value": 12.2,
+    "value": 122,
     "exp": "test",
     "timestamp": "2025-09-29T15:00:00Z",
     "status": "ok"
   },
   "3": {
-    "value": 12.3,
+    "value": 123,
     "exp": "test",
     "timestamp": "2025-09-29T15:00:00Z",
     "status": "warning"
