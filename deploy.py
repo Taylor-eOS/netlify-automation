@@ -19,10 +19,9 @@ with open(zip_filename, "rb") as f:
     deploy_zip = f.read()
 
 headers = {"Authorization": f"Bearer {token}"}
-files = {"file": ("site.zip", deploy_zip)}
+files = {"zip": ("site.zip", deploy_zip, "application/zip")}
 
-response = requests.post(f"https://api.netlify.com/api/v1/sites/{site_id}/deploys", headers=headers, files=files)
+response = requests.post(f"https://api.netlify.com/api/v1/sites/{site_id}/builds", headers=headers, files=files)
 
 print(response.status_code)
 print(response.json())
-
