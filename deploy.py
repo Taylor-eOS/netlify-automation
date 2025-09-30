@@ -1,4 +1,5 @@
 import os
+import sys
 import hashlib
 import json
 import time
@@ -83,5 +84,5 @@ def main(dry_run: bool = False) -> None:
     print("alias:", ready.get("links", {}).get("alias"))
 
 if __name__ == "__main__":
-    main(dry_run=False)
-
+    dry_run = len(sys.argv) > 1 and sys.argv[1].lower() == "dry"
+    main(dry_run=dry_run)
